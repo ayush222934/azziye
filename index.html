@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>ayushedits</title>
-  <link rel="icon" type="image/png" href="assets/headers/IMG_7257.PNG">
-</head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ayush Edits</title>
+  <link rel="icon" type="image/png" href="assets/headers/IMG_7257.PNG">
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -69,43 +67,36 @@
   </footer>
 
   <script src="script.js"></script>
-<!-- Security Protection Script -->
-<script>
-  // Disable Right Click
-  document.addEventListener("contextmenu", function(e) {
-    e.preventDefault();
-  });
 
-  // Disable DevTools & Common Shortcut Keys
-  document.addEventListener("keydown", function(e) {
-    // F12
-    if (e.keyCode === 123) {
+  <!-- Security Protection Script -->
+  <script>
+    document.addEventListener("contextmenu", function(e) {
       e.preventDefault();
-      return false;
-    }
+    });
 
-    // Ctrl+Shift+I/J/C
-    if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) {
-      e.preventDefault();
-      return false;
-    }
+    document.addEventListener("keydown", function(e) {
+      if (e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+      }
+      if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) {
+        e.preventDefault();
+        return false;
+      }
+      if (e.ctrlKey && (e.key === "u" || e.key === "s" || e.key === "p")) {
+        e.preventDefault();
+        return false;
+      }
+    });
 
-    // Ctrl+U, Ctrl+S, Ctrl+P
-    if (e.ctrlKey && (e.key === "u" || e.key === "s" || e.key === "p")) {
-      e.preventDefault();
-      return false;
-    }
-  });
-
-  // Trap DevTools via debugger delay
-  setInterval(function() {
-    const start = new Date().getTime();
-    debugger;
-    const end = new Date().getTime();
-    if (end - start > 200) {
-      window.location.href = "about:blank";
-    }
-  }, 1000);
-</script>
+    setInterval(function() {
+      const start = new Date().getTime();
+      debugger;
+      const end = new Date().getTime();
+      if (end - start > 200) {
+        window.location.href = "about:blank";
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
