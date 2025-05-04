@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ayushedits</title>
+  <link rel="icon" type="image/png" href="assets/headers/IMG_7257.PNG">
+</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ayush Edits</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="fade-in">
+    <div class="header-image"></div>
+    <h1>Ayush</h1>
+  </header>
+
+  <section class="about fade-in">
+    <p>Hi, I’m Ayush. I create impactful edits and visuals using After Effects, Blender, and more. I love storytelling through visuals.</p>
+  </section>
+
+  <section class="showreel fade-in">
+    <h2>Showreel</h2>
+    <video src="assets/videos/showreel.mp4" controls></video>
+  </section>
+
+  <section class="videos fade-in">
+    <h2>Showcase Videos</h2>
+    <div class="video-grid" id="videoGrid"></div>
+  </section>
+
+  <section class="photo-edits fade-in">
+    <h2>Photo Edits</h2>
+    <div class="img-grid" id="photoEdits"></div>
+  </section>
+
+  <section class="renders fade-in">
+    <h2>Blender Renders</h2>
+    <div class="img-grid" id="blenderRenders"></div>
+  </section>
+
+  <section class="social fade-in">
+    <h2>Follow Me</h2>
+    <div class="social-icons">
+      <a href="https://discord.com" target="_blank">
+        <img src="assets/icons/discord-round-color-icon.png" alt="Discord" class="icon" />
+      </a>
+      <a href="https://instagram.com/__.ayuxx?igsh=cGxzeXliZXd2bnF2" target="_blank">
+        <img src="assets/icons/Instagram_icon.png.webp" alt="Instagram" class="icon" />
+      </a>
+      <a href="mailto:ayushdas6734@gmail.com" target="_blank">
+        <img src="assets/icons/gmail-new.png" alt="Gmail" class="icon" />
+      </a>
+    </div>
+  </section>
+
+  <section class="software fade-in">
+    <h2>Software I Use</h2>
+    <div class="software-icons">
+      <img src="assets/icons/Adobe_After_Effects_CC_icon.svg.png" alt="After Effects" class="icon" />
+      <img src="assets/icons/Adobe_Premiere_Pro_CC_icon.svg.png" alt="Premiere Pro" class="icon" />
+      <img src="assets/icons/adobe-photoshop-logo.png" alt="Photoshop" class="icon" />
+      <img src="assets/icons/Blender_logo_no_text.svg.png" alt="Blender" class="icon" />
+    </div>
+  </section>
+
+  <footer>
+    <p>Editing is an art.</p>
+  </footer>
+
+  <script src="script.js"></script>
+<!-- Security Protection Script -->
+<script>
+  // Disable Right Click
+  document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
+
+  // Disable DevTools & Common Shortcut Keys
+  document.addEventListener("keydown", function(e) {
+    // F12
+    if (e.keyCode === 123) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Ctrl+Shift+I/J/C
+    if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Ctrl+U, Ctrl+S, Ctrl+P
+    if (e.ctrlKey && (e.key === "u" || e.key === "s" || e.key === "p")) {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  // Trap DevTools via debugger delay
+  setInterval(function() {
+    const start = new Date().getTime();
+    debugger;
+    const end = new Date().getTime();
+    if (end - start > 200) {
+      window.location.href = "about:blank";
+    }
+  }, 1000);
+</script>
+</body>
+</html>

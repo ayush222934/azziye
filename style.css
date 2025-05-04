@@ -1,0 +1,153 @@
+/* General Reset */
+body {
+  margin: 0;
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Header with Banner */
+header {
+  position: relative;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #000;
+  overflow: hidden;
+}
+.header-image {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('assets/banners/a-2d-style-illustration-of-a-serene-nigh_pdx-w1i2RgeyGXqP6q9ctg_OaxjvF0XTbmLRXn-we03GQ.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.6;
+  z-index: 0;
+}
+header h1 {
+  position: relative;
+  z-index: 1;
+  font-size: 3rem;
+  color: #9f7fff;
+}
+
+/* Sections */
+section {
+  padding: 2rem;
+  text-align: center;
+}
+h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Videos and Images */
+video,
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Grid Layouts */
+.video-grid,
+.img-grid,
+.software-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Thumbnails */
+.thumbnail {
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+/* Image Grid Specific Sizing */
+.img-grid img {
+  width: 250px;
+  height: auto;
+}
+
+/* Social & Software Icons */
+.social-icons,
+.software-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;  /* increased spacing */
+  margin-top: 1rem;
+}
+.social-icons img,
+.software-icons img {
+  height: 50px;
+  width: 50px;
+  transition: transform 0.3s;
+}
+.social-icons img:hover,
+.software-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* Fade‑in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1.2s ease forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  padding: 1rem;
+  text-align: center;
+  color: #666;
+}
+
+/* Modal for Images & Renders */
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  position: relative;
+}
+.modal-content video,
+.modal-content img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 10px;
+}
+.close,
+.close-button {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+/* Disable Text Selection */
+* {
+  user-select: none;
+}
