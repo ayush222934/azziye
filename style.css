@@ -1,54 +1,158 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My 3D Portfolio</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
-<body>
+.new-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 100px;
+  background-color: #111;
+  color: white;
+  min-height: 100vh;
+  gap: 40px;
+}
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <h1><span>SOME</span> OF MY CAR RENDERS</h1>
-    <div class="hero-images">
-      <img src="assets/images/car1.jpg" alt="Porsche Render" />
-      <img src="assets/images/forest_car.jpg" alt="Forest Car" />
-    </div>
-    <p class="caption">3D car renders capturing precision and aesthetics.</p>
-  </section>
+.hero-left {
+  flex: 1;
+}
 
-  <!-- 3D WORLD SECTION -->
-  <section class="threeD-world">
-    <h1><span>EXPLORING</span> THE 3D WORLD</h1>
-    <div class="threeD-images">
-      <img src="assets/images/pinball.jpg" alt="Pinball render" />
-      <img src="assets/images/character.jpg" alt="Character render" />
-    </div>
-    <p class="caption">Creating immersive scenes and props with storytelling elements.</p>
-  </section>
+.hero-left h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
 
-  <!-- SOFTWARE SECTION -->
-  <section class="software">
-    <div class="software-left">
-      <h2>SOFTWARE I USE</h2>
-      <div class="icons">
-        <img src="assets/icons/blender.png" alt="Blender" />
-        <img src="assets/icons/pt.png" alt="Substance Painter" />
-        <img src="assets/icons/mdl.png" alt="MDL" />
-      </div>
-      <p class="caption">Tools that shape my 3D workflow.</p>
-    </div>
-    <div class="software-right">
-      <img src="assets/images/character.jpg" alt="Stylized Scene" />
-    </div>
-  </section>
+.hero-left p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 500px;
+}
 
-  <!-- VIDEO SECTION (optional) -->
-  <section class="video-section">
-    <video src="assets/videos/reel.mp4" autoplay muted loop></video>
-  </section>
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
 
-  <script src="assets/js/script.js"></script>
-</body>
-</html>
+.hero-right video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+.skills-art-section {
+  background-color: #111;
+  color: white;
+  padding: 80px 100px;
+}
+
+.software-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.tool-banner img {
+  max-width: 500px;
+  border-radius: 12px;
+}
+
+.tools-info {
+  text-align: center;
+}
+
+.tools-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.tool-icons img {
+  height: 60px;
+  margin: 0 15px;
+}
+
+.my-arts {
+  text-align: center;
+}
+
+.my-arts h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.my-arts p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.art-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.art-gallery img {
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.art-gallery img:hover {
+  transform: scale(1.05);
+}
+.third-section {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.left-box, .right-box {
+  flex: 1;
+  min-width: 300px;
+  margin: 20px;
+  text-align: center;
+}
+
+.left-box img, .right-box img.character-image {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+}
+
+.caption {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.software-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.software-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.software-icons img {
+  width: 40px;
+  height: 40px;
+}
