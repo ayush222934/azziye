@@ -1,8 +1,3 @@
-// Show a welcome message once
-window.addEventListener('DOMContentLoaded', () => {
-  alert("Welcome to Ayush's Portfolio!\nExplore my works and skills below.");
-});
-
 // Modal Image Viewer
 document.addEventListener('DOMContentLoaded', function () {
   const modal = document.getElementById('imageModal');
