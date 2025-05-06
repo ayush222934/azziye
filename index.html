@@ -1,56 +1,81 @@
-<header class="new-hero">
-  <div class="hero-left">
-    <h1>AYUSH</h1>
-    <p>I'm a video editor who turns raw footage into clean,<br>
-    <strong>impactful stories.</strong><br>
-    With a strong sense of timing and detail,<br>
-    I craft edits that connect and <strong>captions</strong></p>
-  </div>
-  <div class="hero-right">
-    <video autoplay loop muted playsinline>
-      <source src="assets/video/hero-video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</header>
-<section class="skills-art-section">
-  <div class="software-tools">
-    <div class="tool-banner">
-      <img src="assets/art-banner.jpg" alt="Art Banner" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayush | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="new-hero reveal">
+    <div class="hero-left">
+      <h1>AYUSH</h1>
+      <p>I'm a video editor who turns raw footage into clean,<br>
+        <strong>impactful stories.</strong><br>
+        With a strong sense of timing and detail,<br>
+        I craft edits that connect and <strong>captions</strong></p>
     </div>
-    <div class="tools-info">
-      <h2>SOFTWARE I USE</h2>
-      <div class="tool-icons">
-        <img src="assets/photoshop-logo.png" alt="Photoshop" />
-        <img src="assets/illustrator-logo.png" alt="Illustrator" />
+    <div class="hero-right">
+      <video autoplay loop muted playsinline>
+        <source src="assets/video/hero-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </header>
+
+  <!-- Software Tools & Arts Section -->
+  <section class="skills-art-section reveal">
+    <div class="software-tools">
+      <div class="tool-banner">
+        <img src="assets/art-banner.jpg" alt="Art Banner" />
+      </div>
+      <div class="tools-info">
+        <h2>SOFTWARE I USE</h2>
+        <div class="tool-icons">
+          <img src="assets/photoshop-logo.png" alt="Photoshop" />
+          <img src="assets/illustrator-logo.png" alt="Illustrator" />
+        </div>
       </div>
     </div>
+
+    <div class="my-arts">
+      <h2>MY ARTS</h2>
+      <p>Digital art that tells a visual story.</p>
+      <div class="art-gallery">
+        <img src="assets/art1.jpg" alt="Art 1" class="modal-trigger" />
+        <img src="assets/art2.jpg" alt="Art 2" class="modal-trigger" />
+        <img src="assets/art3.jpg" alt="Art 3" class="modal-trigger" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 3D Artwork Section -->
+  <section class="third-section reveal">
+    <div class="section-container">
+      <div class="left-box">
+        <img src="assets/3d-art-1.jpg" alt="3D art render" />
+        <p class="caption">Exploring the 3D world</p>
+      </div>
+      <div class="right-box">
+        <h2 class="software-title">SOFTWARE I USE</h2>
+        <div class="software-icons">
+          <img src="assets/blender-icon.png" alt="Blender" />
+          <img src="assets/substance-icon.png" alt="Substance Painter" />
+          <img src="assets/meshroom-icon.png" alt="Meshroom" />
+        </div>
+        <img src="assets/3d-art-2.jpg" alt="3D character render" class="character-image" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Viewer -->
+  <div class="modal" id="imageModal">
+    <span class="close" id="closeModal">&times;</span>
+    <img class="modal-content" id="modalImg" alt="Preview Image" />
   </div>
 
-  <div class="my-arts">
-    <h2>MY ARTS</h2>
-    <p>Digital art that tells a visual story.</p>
-    <div class="art-gallery">
-      <img src="assets/art1.jpg" alt="Art 1" />
-      <img src="assets/art2.jpg" alt="Art 2" />
-      <img src="assets/art3.jpg" alt="Art 3" />
-    </div>
-  </div>
-</section>
-<section class="third-section">
-  <div class="section-container">
-    <div class="left-box">
-      <img src="images/3d-art-1.jpg" alt="3D art render" />
-      <p class="caption">Exploring the 3D world</p>
-    </div>
-    <div class="right-box">
-      <h2 class="software-title">SOFTWARE I USE</h2>
-      <div class="software-icons">
-        <img src="images/blender-icon.png" alt="Blender" />
-        <img src="images/substance-icon.png" alt="Substance Painter" />
-        <img src="images/meshroom-icon.png" alt="Meshroom" />
-      </div>
-      <img src="images/3d-art-2.jpg" alt="3D character render" class="character-image" />
-    </div>
-  </div>
-</section>
+</body>
+</html>
