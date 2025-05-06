@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ayush | Portfolio</title>
+  <title>ayuxx</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
@@ -77,6 +77,36 @@
     <span class="close" id="closeModal">&times;</span>
     <img class="modal-content" id="modalImg" alt="Preview Image" />
   </div>
+// Disable DevTools & Common Shortcut Keys
+  document.addEventListener("keydown", function(e) {
+    // F12
+    if (e.keyCode === 123) {
+      e.preventDefault();
+      return false;
+    }
 
+    // Ctrl+Shift+I/J/C
+    if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Ctrl+U, Ctrl+S, Ctrl+P
+    if (e.ctrlKey && (e.key === "u" || e.key === "s" || e.key === "p")) {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  // Trap DevTools via debugger delay
+  setInterval(function() {
+    const start = new Date().getTime();
+    debugger;
+    const end = new Date().getTime();
+    if (end - start > 200) {
+      window.location.href = "about:blank";
+    }
+  }, 1000);
+</script>
 </body>
 </html>
