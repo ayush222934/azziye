@@ -207,9 +207,12 @@ body {
 video.character-image {
   width: 100%;
   max-width: 450px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
   display: block;
+  object-fit: cover;
+  background-color: #1a1a1a;
+  border: 1px solid #222;
 }
 
 /* Disable Text Selection */
