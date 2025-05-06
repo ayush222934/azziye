@@ -1,41 +1,19 @@
-// Ensure the DOM is fully loaded before executing scripts
-document.addEventListener('DOMContentLoaded', () => {
-  // 1. Smooth Scroll for Navigation Links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
+// Show a welcome message once
+window.addEventListener('DOMContentLoaded', () => {
+  alert("Welcome to Ayush's Portfolio!\nExplore my works and skills below.");
+});
 
-  // 2. Toggle Video Play/Pause on Click
-  const heroVideo = document.querySelector('.hero-right video');
-  if (heroVideo) {
-    heroVideo.addEventListener('click', () => {
-      heroVideo.paused ? heroVideo.play() : heroVideo.pause();
-    });
-  }
+// Modal Image Viewer
+document.addEventListener('DOMContentLoaded', function () {
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImg');
+  const closeBtn = document.getElementById('closeModal');
 
-  // 3. Image Modal Viewer
-  const modal = document.createElement('div');
-  modal.id = 'imageModal';
-  modal.classList.add('modal');
-  modal.innerHTML = `
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImage">
-  `;
-  document.body.appendChild(modal);
-
-  const modalImg = document.getElementById('modalImage');
-  const closeBtn = modal.querySelector('.close');
-
-  document.querySelectorAll('.art-gallery img').forEach(img => {
-    img.addEventListener('click', () => {
-      modal.style.display = 'block';
-      modalImg.src = img.src;
+  document.querySelectorAll('.modal-trigger').forEach(img => {
+    img.addEventListener('click', function () {
+      modal.style.display = 'flex';
+      modalImg.src = this.src;
+      modalImg.alt = this.alt;
     });
   });
 
@@ -43,76 +21,21 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.style.display = 'none';
   });
 
-  // 4. Scroll Reveal Animations
-  const revealElements = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-      }
-    });
-  }, { threshold: 0.1 });
-
-  revealElements.forEach(el => observer.observe(el));
-
-  // 5. Dark/Light Mode Toggle
-  const toggleButton = document.getElementById('themeToggle');
-  if (toggleButton) {
-    toggleButton.addEventListener('click', () => {
-      document.body.classList.toggle('light-mode');
-    });
-  }
-
-  // 6. Filter Gallery by Software
-  const filterButtons = document.querySelectorAll('.filter-buttons button');
-  const artImages = document.querySelectorAll('.art-gallery img');
-
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const filter = button.getAttribute('data-filter');
-      artImages.forEach(img => {
-        const software = img.getAttribute('data-software');
-        img.style.display = (filter === 'all' || software === filter) ? 'block' : 'none';
-      });
-    });
+  window.addEventListener('click', e => {
+    if (e.target === modal) modal.style.display = 'none';
   });
 
-  // 7. Lazy Loading for Images
-  const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-  const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        if (img.dataset.src) {
-          img.src = img.dataset.src;
-        }
-        observer.unobserve(img);
-      }
+  // Reveal animation
+  const reveals = document.querySelectorAll('.reveal');
+  const revealOnScroll = () => {
+    const trigger = window.innerHeight * 0.85;
+    reveals.forEach(section => {
+      const top = section.getBoundingClientRect().top;
+      if (top < trigger) section.classList.add('active');
     });
-  });
-
-  lazyImages.forEach(img => {
-    imageObserver.observe(img);
-  });
-
-  // 8. Lazy Loading for Videos
-  const lazyVideos = document.querySelectorAll('video[data-src]');
-  const videoObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const video = entry.target;
-        const source = video.querySelector('source');
-        if (source && source.dataset.src) {
-          source.src = source.dataset.src;
-          video.load();
-        }
-        observer.unobserve(video);
-      }
-    });
-  });
-
-  lazyVideos.forEach(video => {
-    videoObserver.observe(video);
-  });
+  };
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
 });
+
 
