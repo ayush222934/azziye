@@ -123,7 +123,9 @@ body {
 .third-section {
   padding: 60px 100px;
 }
-
+.left-box {
+  margin-left: 40px; /* Adjust this value as needed */
+}
 .section-container {
   display: flex;
   justify-content: space-around;
