@@ -204,6 +204,14 @@ body {
   font-size: 30px;
   cursor: pointer;
 }
+video.character-image {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  display: block;
+}
+
 /* Disable Text Selection */
 * {
   user-select: none;
