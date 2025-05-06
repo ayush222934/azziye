@@ -3,100 +3,194 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ayush Edits</title>
-  <link rel="icon" type="image/png" href="assets/headers/IMG_7257.PNG">
-  <link rel="stylesheet" href="style.css"/>
+  <title>3D Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    .section-title {
+      font-size: 36px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    /* ========== SECTION 1 ========== */
+    .hero-section h1 {
+      font-size: 48px;
+      font-weight: 600;
+    }
+
+    .hero-section span {
+      color: #a100ff;
+      font-weight: bold;
+    }
+
+    .hero-images {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .hero-images img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      margin: 10px;
+    }
+
+    .hero-caption {
+      text-align: center;
+      margin-top: 20px;
+      color: #ccc;
+      font-size: 16px;
+    }
+
+    /* ========== SECTION 2 ========== */
+    .car-section h1 {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .car-section .highlight {
+      color: #a100ff;
+    }
+
+    .car-images {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .car-images img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+    }
+
+    .car-caption {
+      margin-top: 20px;
+      text-align: center;
+      color: #ccc;
+      font-size: 16px;
+    }
+
+    /* ========== SECTION 3 ========== */
+    .third-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
+    .third-left, .third-right {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+
+    .third-left img, .third-right img.character-image {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 12px;
+    }
+
+    .third-caption {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    .software-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .software-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .software-icons img {
+      width: 40px;
+      height: 40px;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .hero-section h1,
+      .car-section h1 {
+        font-size: 32px;
+      }
+
+      .hero-images, .car-images {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="fade-in">
-    <div class="header-image"></div>
-    <h1>Ayush</h1>
-  </header>
 
-  <section class="about fade-in">
-    <p>Hi, I’m Ayush. I create impactful edits and visuals using After Effects, Blender, and more. I love storytelling through visuals.</p>
+  <!-- ========== SECTION 1: POSTER ========== -->
+  <section class="section hero-section">
+    <h1><span>POSTER</span> WORK</h1>
+    <div class="hero-images">
+      <img src="images/poster1.jpg" alt="Poster 1">
+      <img src="images/poster2.jpg" alt="Poster 2">
+    </div>
+    <p class="hero-caption">Posters combining creativity and digital storytelling.</p>
   </section>
 
-  <section class="showreel fade-in">
-    <h2>Showreel</h2>
-    <video src="assets/videos/showreel.mp4" controls></video>
+  <!-- ========== SECTION 2: CAR RENDERS ========== -->
+  <section class="section car-section">
+    <h1><span class="highlight">SOME</span> OF MY CAR <span style="color: violet;">Renders</span></h1>
+    <div class="car-images">
+      <img src="images/car1.jpg" alt="Car 1">
+      <img src="images/car2.jpg" alt="Car 2">
+    </div>
+    <p class="car-caption">3D car renders capturing precision and aesthetics.</p>
   </section>
 
-  <section class="videos fade-in">
-    <h2>Showcase Videos</h2>
-    <div class="video-grid" id="videoGrid"></div>
-  </section>
-
-  <section class="photo-edits fade-in">
-    <h2>Photo Edits</h2>
-    <div class="img-grid" id="photoEdits"></div>
-  </section>
-
-  <section class="renders fade-in">
-    <h2>Blender Renders</h2>
-    <div class="img-grid" id="blenderRenders"></div>
-  </section>
-
-  <section class="social fade-in">
-    <h2>Follow Me</h2>
-    <div class="social-icons">
-      <a href="https://discord.com" target="_blank">
-        <img src="assets/icons/discord-round-color-icon.png" alt="Discord" class="icon" />
-      </a>
-      <a href="https://instagram.com/__.ayuxx?igsh=cGxzeXliZXd2bnF2" target="_blank">
-        <img src="assets/icons/Instagram_icon.png.webp" alt="Instagram" class="icon" />
-      </a>
-      <a href="mailto:ayushdas6734@gmail.com" target="_blank">
-        <img src="assets/icons/gmail-new.png" alt="Gmail" class="icon" />
-      </a>
+  <!-- ========== SECTION 3: 3D & SOFTWARE ========== -->
+  <section class="section">
+    <div class="third-section">
+      <div class="third-left">
+        <img src="images/3d-art-1.jpg" alt="3D Art 1">
+        <p class="third-caption">Exploring the 3D world</p>
+      </div>
+      <div class="third-right">
+        <h2 class="software-title">SOFTWARE I USE</h2>
+        <div class="software-icons">
+          <img src="images/blender-icon.png" alt="Blender">
+          <img src="images/substance-icon.png" alt="Substance Painter">
+          <img src="images/meshroom-icon.png" alt="Meshroom">
+        </div>
+        <img src="images/3d-art-2.jpg" alt="3D Character" class="character-image">
+      </div>
     </div>
   </section>
 
-  <section class="software fade-in">
-    <h2>Software I Use</h2>
-    <div class="software-icons">
-      <img src="assets/icons/Adobe_After_Effects_CC_icon.svg.png" alt="After Effects" class="icon" />
-      <img src="assets/icons/Adobe_Premiere_Pro_CC_icon.svg.png" alt="Premiere Pro" class="icon" />
-      <img src="assets/icons/adobe-photoshop-logo.png" alt="Photoshop" class="icon" />
-      <img src="assets/icons/Blender_logo_no_text.svg.png" alt="Blender" class="icon" />
-    </div>
-  </section>
-
-  <footer>
-    <p>Editing is an art.</p>
-  </footer>
-
-  <script src="script.js"></script>
-
-  <!-- Security Protection Script -->
-  <script>
-    document.addEventListener("contextmenu", function(e) {
-      e.preventDefault();
-    });
-
-    document.addEventListener("keydown", function(e) {
-      if (e.keyCode === 123) {
-        e.preventDefault();
-        return false;
-      }
-      if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) {
-        e.preventDefault();
-        return false;
-      }
-      if (e.ctrlKey && (e.key === "u" || e.key === "s" || e.key === "p")) {
-        e.preventDefault();
-        return false;
-      }
-    });
-
-    setInterval(function() {
-      const start = new Date().getTime();
-      debugger;
-      const end = new Date().getTime();
-      if (end - start > 200) {
-        window.location.href = "about:blank";
-      }
-    }, 1000);
-  </script>
 </body>
 </html>
