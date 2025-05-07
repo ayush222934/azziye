@@ -242,17 +242,16 @@ video.character-image {
 * {
   user-select: none;
 }
-/* 📱 Mobile Responsive Fix for Videos */
+/* 📱 Keep Desktop Layout on Mobile */
 @media (max-width: 768px) {
   .new-hero {
-    flex-direction: column;
-    padding: 40px 20px;
-    gap: 20px;
-    text-align: center;
+    flex-direction: row; /* Maintain row layout instead of column */
+    padding: 40px;
+    gap: 30px;
   }
 
   .hero-left h1 {
-    font-size: 2.5rem;
+    font-size: 3rem; /* Larger text for mobile */
   }
 
   .hero-left p {
@@ -260,48 +259,24 @@ video.character-image {
     max-width: 100%;
   }
 
-  .hero-right video,
-  .left-box video.character-image,
-  .right-box video.character-image {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  .hero-right video {
+    width: 60%; /* Adjust the video size */
+    max-width: 100%;
   }
 
   .skills-art-section,
   .section-container {
     padding: 40px 20px;
-    flex-direction: column;
-    align-items: center;
   }
 
-  .left-box,
-  .right-box {
-    width: 100%;
-    padding: 10px 0;
-    text-align: center;
-  }
-
-  .software-icons,
-  .tool-icons {
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+  .left-box, .right-box {
+    width: 48%;
   }
 
   .tool-banner img,
-  .art-gallery img,
-  .left-box img,
-  .right-box img {
+  .art-gallery img {
     width: 100%;
     max-width: 100%;
-  }
-
-  .modal-content {
-    max-width: 95%;
-    max-height: 80%;
   }
 /* Fix for stretched icons in Software Tools section */
 .software-icons img, 
