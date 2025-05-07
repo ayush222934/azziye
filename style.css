@@ -17,16 +17,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 100px; /* reduced padding */
-  min-height: 90vh;    /* reduced height */
+  padding: 20px 100px 80px; /* top padding reduced */
+  min-height: auto; /* no forced height */
   gap: 40px;
-  position: relative;
+  position: absolute; /* overlap */
+  top: 10%; /* move hero section up */
+  left: 0;
+  right: 0;
   z-index: 2;
-}
-
-
-.hero-left {
-  flex: 1;
 }
 
 .hero-left h1 {
