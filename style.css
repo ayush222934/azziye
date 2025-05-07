@@ -40,16 +40,24 @@ body {
 
 .hero-right {
   flex: 1;
-  display: flex;
-  justify-content: center;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
 .hero-right video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 600px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  height: 100%;
+  object-fit: cover;
 }
+
 
 /* Skills and Art Section */
 .skills-art-section {
