@@ -354,24 +354,4 @@ video.character-image {
   position: relative;
   z-index: 2;
 }
-/* Background Video Styles */
-#bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  /* Ensures it fills the screen while maintaining aspect ratio */
-  z-index: -1;        /* Keeps the video behind all content */
-}
-
-.video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Optional overlay */
-  z-index: 0;
-}
 
