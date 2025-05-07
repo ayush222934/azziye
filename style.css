@@ -66,9 +66,11 @@ body {
 }
 
 .tool-banner img {
-  max-width: 1000px;
-  border-radius: 12px;
+  max-width: 1000px; /* Limits the maximum width of the image to 1000px */
+  width: 100%; /* Ensures the image scales to fit the container */
+  border-radius: 12px; /* Applies rounded corners to the image */
 }
+
 
 .tools-info {
   text-align: center;
