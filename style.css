@@ -17,10 +17,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 100px;
-  min-height: 100vh;
+  padding: 40px 100px; /* reduced padding */
+  min-height: 90vh;    /* reduced height */
   gap: 40px;
+  position: relative;
+  z-index: 2;
 }
+
 
 .hero-left {
   flex: 1;
@@ -343,14 +346,9 @@ video.character-image {
   z-index: -1;
 }
 
+.hero-left,
 .hero-right {
-  margin-top: -100px; /* Adjust this value as needed */
-  position: relative;
-  z-index: 1;
-}
-
-.hero-left {
-  margin-top: -100px; /* Text ko bhi upar shift karega */
+  margin-top: 0; /* or try -40px if you still want a small lift */
   position: relative;
   z-index: 2;
 }
