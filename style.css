@@ -321,4 +321,15 @@ video.character-image {
   max-width: 100%; /* Ensure the icon doesn't stretch beyond its container */
   object-fit: contain; /* Prevent stretching, maintain aspect ratio */
 }
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.5;
+  z-index: -1;
+  pointer-events: none;
+}
 
