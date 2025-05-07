@@ -303,10 +303,12 @@ video.character-image {
     max-width: 95%;
     max-height: 80%;
   }
-  /* Fix for stretched icons */
-.tool-icons img,
-.software-icons img {
+/* Fix for stretched icons in Software Tools section */
+.software-icons img, 
+.tool-icons img {
   width: auto;
-  height: 60px; /* Adjust height as needed */
-  object-fit: contain; /* Ensures icons maintain their aspect ratio */
+  height: 60px; /* Adjust to fit your design */
+  max-width: 100%; /* Ensure the icon doesn't stretch beyond its container */
+  object-fit: contain; /* Prevent stretching, maintain aspect ratio */
 }
+
