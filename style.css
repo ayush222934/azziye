@@ -242,3 +242,65 @@ video.character-image {
 * {
   user-select: none;
 }
+/* 📱 Mobile Responsive Fix for Videos */
+@media (max-width: 768px) {
+  .new-hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .hero-left h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-left p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .hero-right video,
+  .left-box video.character-image,
+  .right-box video.character-image {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  }
+
+  .skills-art-section,
+  .section-container {
+    padding: 40px 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-box,
+  .right-box {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .software-icons,
+  .tool-icons {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .tool-banner img,
+  .art-gallery img,
+  .left-box img,
+  .right-box img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .modal-content {
+    max-width: 95%;
+    max-height: 80%;
+  }
+}
