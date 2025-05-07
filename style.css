@@ -343,27 +343,15 @@ video.character-image {
   z-index: -1;
 }
 
-.section-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-top: -80px; /* lift both video and text upward */
+.hero-right {
+  margin-top: -100px; /* Adjust this value as needed */
+  position: relative;
+  z-index: 1;
 }
 
-.left-box,
-.right-box {
-  width: 48%;
-}
-
-.character-image {
-  width: 100%;
-  height: auto;
-}
-
-.my-arts {
-  color: white;
-  font-weight: bold;
-  font-size: 24px;
-  margin-bottom: 10px;
+.hero-left {
+  margin-top: -100px; /* Text ko bhi upar shift karega */
+  position: relative;
+  z-index: 2;
 }
 
