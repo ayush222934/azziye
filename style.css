@@ -21,7 +21,7 @@ body {
   min-height: auto; /* no forced height */
   gap: 40px;
   position: absolute; /* overlap */
-  top: 10%; /* move hero section up */
+  top: 5%; /* move hero section up */
   left: 0;
   right: 0;
   z-index: 2;
