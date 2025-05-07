@@ -17,14 +17,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 100px 40px; /* top padding reduced */
-  min-height: auto; /* no forced height */
+  padding: 40px 100px; /* Reduced top and bottom padding */
+  min-height: 90vh;    /* Reduced minimum height */
   gap: 40px;
-  top: 5%; /* move hero section up */
-  left: 0;
-  right: 0;
+  position: relative;
   z-index: 2;
 }
+
 
 .hero-left h1 {
   font-size: 4rem;
