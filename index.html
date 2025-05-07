@@ -9,11 +9,11 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-<video autoplay muted loop playsinline id="bg-video">
-  <source src="assets/adadad.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-<div class="video-overlay"></div>
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="assets/adadad.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="video-overlay"></div>
 
   <!-- Hero Section -->
   <header class="new-hero reveal">
@@ -47,9 +47,9 @@
       </div>
     </div>
 
-   <div class="my-arts">
-  <h2>MY ARTS</h2>
-  <p>Digital art that tells a visual story.</p>
+    <div class="my-arts">
+      <h2>MY ARTS</h2>
+      <p>Digital art that tells a visual story.</p>
       <div class="art-gallery">
         <img src="assets/12.PNG" alt="Art 1" class="modal-trigger" />
         <img src="assets/car2.jpg" alt="Art 2" class="modal-trigger" />
@@ -62,11 +62,10 @@
   <section class="third-section reveal">
     <div class="section-container">
       <div class="left-box">
-      <video autoplay muted loop playsinline class="character-image">
-  <source src="assets/Comp 3.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
+        <video autoplay muted loop playsinline class="character-image">
+          <source src="assets/Comp 3.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <p class="caption">Exploring the 3D world</p>
       </div>
       <div class="right-box">
@@ -77,10 +76,9 @@
           <img src="assets/MD11-Icon.png" alt="Meshroom" />
         </div>
         <video autoplay muted loop playsinline class="character-image">
-  <source src="assets/Comp_1 (1).mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
+          <source src="assets/Comp_1 (1).mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   </section>
@@ -90,55 +88,56 @@
     <span class="close" id="closeModal">&times;</span>
     <img class="modal-content" id="modalImg" alt="Preview Image" />
   </div>
-<!-- Enhanced Security Protection Script -->
-<script>
-  (function () {
-    // Disable Right Click
-    document.addEventListener("contextmenu", e => e.preventDefault());
 
-    // Disable Selection, Copy, Drag
-    document.addEventListener("selectstart", e => e.preventDefault());
-    document.addEventListener("dragstart", e => e.preventDefault());
-    document.addEventListener("copy", e => e.preventDefault());
+  <!-- Enhanced Security Protection Script -->
+  <script>
+    (function () {
+      // Disable Right Click
+      document.addEventListener("contextmenu", e => e.preventDefault());
 
-    // Disable Key Shortcuts
-    document.addEventListener("keydown", function (e) {
-      const forbiddenKeys = [
-        123, // F12
-        73,  // I
-        74,  // J
-        67,  // C
-        85,  // U
-        83,  // S
-        80   // P
-      ];
+      // Disable Selection, Copy, Drag
+      document.addEventListener("selectstart", e => e.preventDefault());
+      document.addEventListener("dragstart", e => e.preventDefault());
+      document.addEventListener("copy", e => e.preventDefault());
 
-      // Ctrl+Shift+Key or Ctrl+Key
-      if (
-        (e.ctrlKey && e.shiftKey && forbiddenKeys.includes(e.keyCode)) ||
-        (e.ctrlKey && forbiddenKeys.includes(e.keyCode)) ||
-        (e.metaKey && forbiddenKeys.includes(e.keyCode)) // for Mac
-      ) {
-        e.preventDefault();
-        return false;
-      }
-    });
+      // Disable Key Shortcuts
+      document.addEventListener("keydown", function (e) {
+        const forbiddenKeys = [
+          123, // F12
+          73,  // I
+          74,  // J
+          67,  // C
+          85,  // U
+          83,  // S
+          80   // P
+        ];
 
-    // Advanced DevTools Trap
-    let devtoolsOpened = false;
-    const devtoolsTrap = () => {
-      const before = performance.now();
-      debugger;
-      const after = performance.now();
-      if (after - before > 100) {
-        devtoolsOpened = true;
-        window.location.href = "about:blank";
-      }
-    };
+        // Ctrl+Shift+Key or Ctrl+Key
+        if (
+          (e.ctrlKey && e.shiftKey && forbiddenKeys.includes(e.keyCode)) ||
+          (e.ctrlKey && forbiddenKeys.includes(e.keyCode)) ||
+          (e.metaKey && forbiddenKeys.includes(e.keyCode)) // for Mac
+        ) {
+          e.preventDefault();
+          return false;
+        }
+      });
 
-    // Randomized interval
-    setInterval(devtoolsTrap, Math.floor(Math.random() * 3000) + 2000);
-  })();
-</script>
+      // Advanced DevTools Trap
+      let devtoolsOpened = false;
+      const devtoolsTrap = () => {
+        const before = performance.now();
+        debugger;
+        const after = performance.now();
+        if (after - before > 100) {
+          devtoolsOpened = true;
+          window.location.href = "about:blank";
+        }
+      };
+
+      // Randomized interval
+      setInterval(devtoolsTrap, Math.floor(Math.random() * 3000) + 2000);
+    })();
+  </script>
 </body>
 </html>
