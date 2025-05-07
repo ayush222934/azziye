@@ -313,13 +313,4 @@ video.character-image {
   max-width: 100%; /* Ensure the icon doesn't stretch beyond its container */
   object-fit: contain; /* Prevent stretching, maintain aspect ratio */
 }
-.my-arts {
-  text-align: left;
-  align-self: flex-start;
-  width: 100%;
-  padding-left: 20px;
-}
-.my-arts {
-  margin-top: 120px; /* ya jitna space chahiye */
-}
 
