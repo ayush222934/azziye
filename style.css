@@ -345,7 +345,7 @@ video.character-image {
 
 /* Optional: Bring hero section higher for overlap look */
 header.hero {
-  margin-top: -120px; /* adjust overlap depth */
+  margin-top: -180px; /* adjust overlap depth */
   position: relative;
   z-index: 1;
 }
