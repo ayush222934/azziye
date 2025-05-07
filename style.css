@@ -259,18 +259,30 @@ video.character-image {
 @media (max-width: 768px) {
   .new-hero {
     flex-direction: column;
-    padding: 40px 20px;
+    padding: 30px 16px;
     gap: 20px;
     text-align: center;
   }
 
+  .hero-left {
+    padding: 0 16px;
+  }
+
   .hero-left h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-bottom: 16px;
   }
 
   .hero-left p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #ddd;
     max-width: 100%;
+  }
+
+  .hero-right {
+    width: 100%;
+    margin: 0 auto;
   }
 
   .hero-right video,
@@ -279,8 +291,8 @@ video.character-image {
     width: 100% !important;
     max-width: 100% !important;
     height: auto;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
   }
 
   .skills-art-section,
@@ -288,6 +300,7 @@ video.character-image {
     padding: 40px 20px;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 40px;
   }
 
   .left-box,
@@ -297,6 +310,17 @@ video.character-image {
     text-align: center;
   }
 
+  .tool-banner img,
+  .art-gallery img,
+  .left-box img,
+  .right-box img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+
   .software-icons,
   .tool-icons {
     flex-wrap: wrap;
@@ -304,19 +328,22 @@ video.character-image {
     justify-content: center;
   }
 
-  .tool-banner img,
-  .art-gallery img,
-  .left-box img,
-  .right-box img {
-    width: 100%;
-    max-width: 100%;
-  }
-
   .modal-content {
     max-width: 95%;
     max-height: 80%;
   }
+
+  .my-arts h2,
+  .tools-info h2 {
+    font-size: 2rem;
+  }
+
+  .my-arts p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
 }
+
 
 /* Fix for stretched icons in Software Tools section */
 .software-icons img, 
