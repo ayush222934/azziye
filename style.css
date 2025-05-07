@@ -303,4 +303,10 @@ video.character-image {
     max-width: 95%;
     max-height: 80%;
   }
+  /* Fix for stretched icons */
+.tool-icons img,
+.software-icons img {
+  width: auto;
+  height: 60px; /* Adjust height as needed */
+  object-fit: contain; /* Ensures icons maintain their aspect ratio */
 }
